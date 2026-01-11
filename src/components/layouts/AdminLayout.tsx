@@ -1,12 +1,12 @@
 import { HexagonIcon, PanelLeftOpenIcon } from 'lucide-react';
 import { NavLink, Outlet, useLocation } from 'react-router';
-import { userSidebarMenuItems } from '../../constants/menu.constants';
+import { adminSidebarMenuItems } from '../../constants/menu.constants';
 import ThemeToggle from '../ThemeToggle';
 
-function DashboardLayout() {
+function AdminLayout() {
    const location = useLocation();
 
-   const currentRoute = userSidebarMenuItems.find((route) => route.path === location.pathname);
+   const currentRoute = adminSidebarMenuItems.find((route) => route.path === location.pathname);
 
    return (
       <div className='drawer lg:drawer-open'>
@@ -44,7 +44,7 @@ function DashboardLayout() {
                   <HexagonIcon className='is-drawer-open:hidden w-5 h-5' />
                </div>
                <ul className='menu w-full grow'>
-                  {userSidebarMenuItems.map((item) => {
+                  {adminSidebarMenuItems.map((item) => {
                      const Icon = item.icon;
                      return (
                         <li key={item.key} className='mt-1 mb-1'>
@@ -73,4 +73,4 @@ function DashboardLayout() {
    );
 }
 
-export default DashboardLayout;
+export default AdminLayout;

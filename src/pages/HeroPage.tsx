@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
-import { routes } from '../constants/routes';
 import ThemeToggle from '../components/ThemeToggle';
+import { routes } from '../constants/routes.constants';
 
 function HeroPage() {
    return (

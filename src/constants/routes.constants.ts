@@ -1,10 +1,16 @@
 export const routes = {
-   home: '/home',
    login: '/login',
+
+   // user routes
+   home: '/home',
    settings: '/settings',
    elevators: '/elevators',
    elevatorsDetail: '/elevators/:id',
    maintenances: '/maintenances',
+
+   // admin routes
+   adminHome: '/admin/home',
+   adminRoles: '/admin/roles',
 } as const;
 
 export const route = {

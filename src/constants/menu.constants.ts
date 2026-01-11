@@ -1,6 +1,6 @@
 import { ArrowUpDownIcon, HouseIcon, SettingsIcon, WrenchIcon, type LucideProps } from 'lucide-react';
 import type { ForwardRefExoticComponent, RefAttributes } from 'react';
-import { routes } from './routes';
+import { routes } from './routes.constants';
 
 interface ISidebarMenuItem {
    key: string;
@@ -10,7 +10,24 @@ interface ISidebarMenuItem {
    path: string;
 }
 
-const sidebarMenu: ISidebarMenuItem[] = [
+export const adminSidebarMenuItems: ISidebarMenuItem[] = [
+   {
+      key: 'home',
+      label: 'Anasayfa',
+      icon: HouseIcon,
+      tooltip: 'Anasayfa',
+      path: routes.adminHome,
+   },
+   {
+      key: 'roles',
+      label: 'Roller',
+      icon: ArrowUpDownIcon,
+      tooltip: 'Roller',
+      path: routes.adminRoles,
+   },
+];
+
+export const userSidebarMenuItems: ISidebarMenuItem[] = [
    {
       key: 'home',
       label: 'Anasayfa',
@@ -40,5 +57,3 @@ const sidebarMenu: ISidebarMenuItem[] = [
       path: routes.settings,
    },
 ];
-
-export default sidebarMenu;
