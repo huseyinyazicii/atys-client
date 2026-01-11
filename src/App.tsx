@@ -1,6 +1,8 @@
 import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community';
 import { useEffect } from 'react';
+import LoadingOverlay from './components/LoadingOverlay';
 import LocalStorageKeys from './constants/localStorageKeys';
+import { ToastProvider } from './contexts/toast.context';
 import Router from './Router';
 import useSystemStore, { type ETheme } from './stores/useSystemStore';
 
@@ -17,7 +19,14 @@ function App() {
       }
    }, []);
 
-   return <Router />;
+   return (
+      <>
+         <ToastProvider>
+            <Router />
+         </ToastProvider>
+         <LoadingOverlay />
+      </>
+   );
 }
 
 export default App;

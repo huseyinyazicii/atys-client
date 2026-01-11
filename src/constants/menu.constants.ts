@@ -20,9 +20,9 @@ export const adminSidebarMenuItems: ISidebarMenuItem[] = [
    },
    {
       key: 'roles',
-      label: 'Roller',
+      label: 'Rol Yönetimi',
       icon: ArrowUpDownIcon,
-      tooltip: 'Roller',
+      tooltip: 'Rol Yönetimi',
       path: routes.adminRoles,
    },
 ];

@@ -7,3 +7,8 @@ export interface RoleModel {
 export interface CreateRoleRequest {
    name: string;
 }
+
+export interface UpdateRoleRequest {
+   id: string;
+   name: string;
+}
